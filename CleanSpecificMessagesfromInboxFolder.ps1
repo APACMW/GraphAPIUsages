@@ -22,7 +22,6 @@ https://learn.microsoft.com/en-us/exchange/permissions-exo/application-rbac#test
 3. Run Connect-Exchangeonline
 
 4. Run the script to move the specific messages to Junk Folder
-$mailboxes = Get-DistributionGroupMember -Identity 'testSG@vjqg8.onmicrosoft.com' | select Identity, Alias,PrimarySmtpAddress;
 $mailboxes = Get-DistributionGroupMember -Identity 'TestMailenabledSG@domain.onmicrosoft.com' | Select-Object Identity, Alias,PrimarySmtpAddress;
 $startDate = '2025-01-01T22:00:00Z';
 $endDate = '2025-02-01T05:00:00Z' ;
