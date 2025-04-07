@@ -12,7 +12,8 @@ https://learn.microsoft.com/en-us/graph/filter-query-parameter?tabs=http
 2. for the events, can't use the Filter operator on the organizer property, but can use the filter operator on the start and end properties.
 
  .Example
-   # Installl and import this PowerShell Module   
+   # Installl and import this PowerShell Module
+   Install-Module -Name ZIZHUGraphEXO;  
 
  .Example
     using module .\ZIZHUGraphEXO.psm1;
