@@ -12,11 +12,10 @@ https://learn.microsoft.com/en-us/graph/filter-query-parameter?tabs=http
 2. for the events, can't use the Filter operator on the organizer property, but can use the filter operator on the start and end properties.
 
  .Example
-   # Installl and import this PowerShell Module
-   Install-Module -Name ZIZHUGraphEXO;  
+   # Installl and import this PowerShell Module   
 
  .Example
-    using module .\ZIZHUGraphEXO.psm1;
+    using module ZIZHUGraphEXO;
     $userId = 'leeg@vjqg8.onmicrosoft.com';
     $tenantId = "cff343b2-f0ff-416a-802b-28595997daa2";
     $clientId = "51d1eabe-88f4-4082-aaaa-3f94470baec8";
@@ -106,7 +105,7 @@ $records | Format-List;
 $userId= 'leeg@vjqg8.onmicrosoft.com';
 $startDate = "2025-03-01T00:00:00Z"
 $endDate = "2025-03-31T23:59:59Z"
-$senderEmail = 'doqi@microsoft.com'
+$senderEmail = 'test@domain.com'
 $filter = "from/emailAddress/address eq '$senderEmail' and receivedDateTime ge $startDate and receivedDateTime le $endDate"
 Clear-SpecificMessagesfromMailbox -userid $userid -queryString $filter -processingMode "junk" -isFilter $true -maxMails 5 -records $records;
 $records | Format-List;
@@ -231,7 +230,7 @@ $records | Format-List;
 
 $startDate = "2025-04-01T00:00:00Z"
 $endDate = "2025-04-10T23:59:59Z"
-$organizerEmail = 'doqi@microsoft.com'
+$organizerEmail = 'test@domain.com'
 $filter = "start/dateTime ge '$startDate' and start/dateTime le '$endDate'"
 Clear-SpecificEventsfromMailbox -userid $userid -filterString $filter -processingMode "softdelete" -maxEvents 50 -records $records -organizerEmail $organizerEmail;
 $records | Format-List;
